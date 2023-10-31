@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #afcde3;
+  color: #ffffff;
+}
+
+.container {
+  width: 780px;
+  border-radius: 20px;
+  padding: 35px 40px;
+  background: #000000;
+}
+
+.container header {
+  color: #a2a2a2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header .column span {
+  margin-right: 15px;
+}
+
+#flexCheckDefault {
+  width: 60px;
+  height: 30px;
+  appearance: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+
+#flexCheckDefault::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #b4bbc0;
+  top: 50%;
+  left: 0.3rem;
+  border-radius: inherit;
+  position: absolute;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+#flexCheckDefault:checked::before {
+  left: 2.1rem;
+  background-color: #0D6EFD;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 40px;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  color: #a2a2a2;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .white {
+  width: 70px;
+  height: 230px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background: linear-gradient(#ffffff 96%, #eee 4%);
+}
+
+.piano-keys .black {
+  width: 44px;
+  height: 140px;
+  z-index: 2;
+  margin: 0 -22px 0 -22px;
+  border: 1px solid #000000;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom #ffffff 0%, #eee 100%);
+}
+
+.piano-keys .black.active {
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom #000 0%, #434343 100%);
+}
+
+#volume,
+#teclas {
+  font-weight: 500;
+  font-style: italic;
+  font-size: large;
+}
+
+.btn {
+  margin-top: 1rem;
+  width: 100%;
+  align-items: center;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.piano-keys .key.hide span {
+  display: none;
+}
